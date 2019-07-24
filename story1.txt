@@ -1,0 +1,2 @@
+As a developer, I want to be able to make a GET http call to a 'users' endpoint
+that returns all users so that I can eventually display these users on an admin page
