@@ -1,0 +1,22 @@
+{
+  "name": "javascript-interview",
+  "version": "1.0.0",
+  "description": "Javascript environment for interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/dapperDerek/javascript-interview.git",
+  "author": "Derek Campbell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dapperDerek/javascript-interview/issues"
+  },
+  "homepage": "https://github.com/dapperDerek/javascript-interview#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1"
+  }
+}
