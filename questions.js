@@ -14,12 +14,68 @@ const thing2 = () => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * What do the conditionals below return? Explain.
  */
 
 "1" == 1
+
 "1" === 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
