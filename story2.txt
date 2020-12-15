@@ -1,8 +1,0 @@
-As a user, I want to an aesthetically pleasing and on-brand home page so that I stay and browse the site.
-
-Guidelines:
-Background color of home page should be #333333
-Font color should be white
-All text should be centered and Arial font
-H1 text should be at least 50px large and say: "Welcome to CoolThingsSoldHere.com"
-Paragraph should be below H1, be at least 20px, and say: "We sell really cool things here. Trust us."
