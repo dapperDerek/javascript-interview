@@ -1,26 +1,25 @@
 Using Cypress, write an integration test that does the following:
 
-[ ] Visit 'www.freshly.com/subscriptions/new'
-[ ] Should see form with email and zipcode fields
-[ ] Enter email and zipcode (35125 is a usable zipcode)
-[ ] Should see 'choose a plan' section
-[ ] Select a meal plan
-[ ] Should see 'choose a delivery day' section
-[ ] Select a delivery day from available options
-[ ] Click 'Next'
-[ ] Should see 'meal selection' section
-[ ] Select number of meals to match selected plan
-[ ] Click 'Next'
-[ ] Should see 'checkout' section
-[ ] Should see 'Order Summary' panel with accurate info
-[ ] Should see 'My Meals' panel with accurate info
-[ ] Should see 3 steps: Create Account, Delivery Address, Payment Info
+[x] Visit 'www.freshly.com/subscriptions/new'
+[x] Should see form with email and zipcode fields
+[x] Enter email and zipcode (35125 is a usable zipcode)
+[x] Should see 'choose a plan' section
+[x] Select a meal plan
+[x] Should see 'choose a delivery day' section
+[x] Select a delivery day from available options
+[x] Click 'Next'
+[x] Should see 'meal selection' section
+[x] Select number of meals to match selected plan
+[x] Click 'Next'
+[x] Should see 'checkout' section
+[x] Should see 'Order Summary' panel with accurate info
+[x] Should see 'My Meals' panel with accurate info
+[x] Should see 3 steps: Create Account, Delivery Address, Payment Info
 [ ] Should start on Create Account step
 [ ] Complete 'create account' form
 [ ] Click 'Next'
-[ ] Should be on Delivery Address step
-[ ] Complete the 'delivery address' form
+[x] Should be on Delivery Address step
+[~] Complete the 'delivery address' form
 [ ] Click 'Next'
 [ ] Should be on 'Payment Info' step
 [ ] Complete 'payment info form'
-

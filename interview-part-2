@@ -1,2 +1,30 @@
 Describe how you would thoroughly test the "www.freshly.com/login" page below:
 
+Positive Test Cases:
+
+-Verify all the links in the Header and Footer work properly
+-Verify that I can login using my credentials
+-Verify "Forgot Password" link works properly
+-Verify "Don’t have an account? Get Started" link is working properly
+-Verify if network is slow, does the data in inout field get cached
+
+Negative Test Cases:
+-Try to login with an incorrect email and verify error messages
+-Try to login with an incorrect password and verify error messages
+-Try a good amount of times to verify the number of attempts allowed
+
+Security Testing:
+-Try SQL injections/script code in all input fields
+-Test for URL Manipulation
+-Verify PII isn't passed over URL
+
+Accessibility Testing (a11y):
+-Use tools like Wave and Axe to identify a11y issues
+-Use VoiceOver in case of Macs to verify web page is working properly
+-Verify ctrl + opt arrow keys navigation is working properly with VoiceOver
+
+Localization:
+-Verify page looks good for languages with large words/characters (i.e German)
+-Verify page functions well for right to left languages (i.e Arabic)
+-Dates/numbers should be appropriate per locale
+-German, Japanese and Arabic are good go to languages to cover all localization test cases
