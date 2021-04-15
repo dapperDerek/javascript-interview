@@ -1,2 +1,33 @@
 Describe how you would thoroughly test the "www.freshly.com/login" page below:
 
+Describe how you would thoroughly test the "www.freshly.com/login" page below:
+
+
+Verify the cursor is focused on the “Email” text box on the page load (login page)
+Verify the login screen contains elements such as Email, Password, Log In button, Forgot Password? link, and Get Started link
+Validate tab functionality is working properly
+Verify whether all the text boxes have a minimum and maximum length
+Verify the password is in encrypted form (masked format) when entered
+Verify the User is able to Login with Valid Credentials
+Verify the User is not able to Login with an invalid Username and invalid Password
+Verify the User is not able to Login with a Valid Username and invalid Password
+Verify the User is not able to log in with an invalid Username and Valid Password
+Verify the User is not able to log in with a blank Username or Password
+Verify Sorry, incorrect email and password alert appears for all Invalid Login scenario mentioned above
+Verify clicking on the browser back button after successful login should not take the User to log out mode
+Verify clicking on the browser back button after successful logout should not take the User to a logged-in mode
+Verify there is a limit on the total number of unsuccessful login attempts
+Verify the User should be able to login with the new password after changing the password
+Verify the user should not be able to login with the old password after changing the password
+Verify whether the user is still logged in after the browser is closed and reopened
+Verify the timeout of the login session (Session Timeout)
+Verify the logout link is redirected to login/home page
+Verify User is redirected to appropriate page after successful login
+Verify the ways to retrieve the password if the user forgets the password
+Verify the User is redirected to the Forgot Password page when clicking on the Forgot Password? link
+Verify the User is redirected to the Create an account page when clicking on the Get Started link
+Verify validation message is displayed in the case when User leaves Username or Password as blank
+Verify the login page and all the fields in the login page are displaying without any break in different browsers
+Verify that the user is able to login when the browser cookies are cleared. When the cookies are cleared, system should not allow user to login automatically.
+Verify the login functionality when the browser cookies are turned off.
+
