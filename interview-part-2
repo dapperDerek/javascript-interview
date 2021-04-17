@@ -1,2 +1,33 @@
 Describe how you would thoroughly test the "www.freshly.com/login" page below:
 
+I would test the page based off of the questions below. They are based off a blend of different test types.
+
+UI Tests
+- Can the page load?
+- Do I get the company logo?
+- Do I get proper input validation?
+- Can I use keyboard shortcuts to quickly login, such as tabs and clicking enter when I'm done?
+- Is the page responsive so that it supports all screen sizes 
+- Do all the routing and navigation buttons take me to where they are supposed to?
+- Am I logged in and taken to the home page after posting successful credentials?
+
+API Tests
+- Can I perform POST login requests?
+- Do I received a token after successful login?
+- If I clear the token after successful login, can I perform other API requests successfully?
+- Are there any input field restrictions like max character size?
+- Are there password validation requirements on the API request?
+
+UX and Usability Tests
+- If I fail to login, do I get a message instructing me to check credentials?
+- If I use the Forgot Password, will I be routed properly, and will I be able to login successfully afterward?
+- Can I create a new account successfully?
+- If I have a URL, but I am redirected to the login page first, will I be redirected back to the original URL after successful login?
+- Are there max login attempts?
+
+Compatibility Tests
+- Can I login any all supported browsers?
+- Can I login on a computer as well as on a mobile device?
+
+Performance Tests
+- How many users can login at once before a performance hit?
