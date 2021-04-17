@@ -63,7 +63,24 @@ app.get('/subscriptions', (req, res) => {
   }
 })
 app.get('/deliveries', (req, res) => {
-  res.send('Deliveries!')
+  const delivery_id = req.query.id;
+  const delivery_subscription_id = req.query.subscription_id;
+
+  // Query parameter is a delivery id
+  if (delivery_id) {
+    let response = {};
+
+    response.deliveries = deliveries.filter(d => d.id === parseInt(delivery_id))
+    response.subscription = subscriptions.find(s => s.id === parseInt(response.deliveries[0].subscription_id))
+    response.user = users.find(u => u.subscription_id === parseInt(response.deliveries[0].subscription_id))
+    
+    res.status(200).send(response)
+  }
+  // Query parameter is a delivery subscription id
+  else if (delivery_subscription_id) {
+    let response = deliveries.filter(d => d.subscription_id === parseInt(delivery_subscription_id))
+    res.status(200).send(response)
+  }
 })
 app.get('/', (req, res) => {
   res.send('Nothing here bud.')

@@ -65,9 +65,27 @@ describe('Interview', () => {
 
   //  ----- Deliveries API  -----  \\
   it('When /deliveries api is called with id param then it returns subscription, user, and deliveries', () => {
-    // Todo
+    cy.request('http://localhost:3000/deliveries?id=1')
+      .then(res => {
+        expect(res.status).to.equal(200)
+        expect(res.body.subscription).to.exist
+        expect(res.body.user).to.exist
+        expect(res.body.deliveries).to.have.length(1)
+        expect(res.body.deliveries[0].id).to.equal(1)
+      })
   })
   it('When /deliveries api is called with subscription_id param then it returns all deliveries for given subscription_id', () => {
-    // Todo
+    cy.request('http://localhost:3000/deliveries?subscription_id=1')
+      .then(res => {
+        expect(res.status).to.equal(200)
+
+        // Any random element should meet these requirements
+        const randomIndex = Math.floor(Math.random() * res.body.length)
+        const delivery = res.body[randomIndex]
+
+        expect(delivery.id).to.not.be.null
+        expect(delivery.subscription_id).to.equal(1)
+        expect(delivery.date).to.exist
+      })
   })
 })
