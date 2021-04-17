@@ -39,10 +39,27 @@ describe('Interview', () => {
 
   //  ----- Subscriptions API  -----  \\
   it('When /subscriptions api is called with id param then it returns subscription, user, and deliveries', () => {
-    // Todo
+    cy.request('http://localhost:3000/subscriptions?id=1')
+      .then(res => {
+        expect(res.status).to.equal(200)
+        expect(res.body.subscription.id).to.equal(1)
+        expect(res.body.user.subscription_id).to.equal(1)
+        expect(res.body.deliveries).to.be.a('Array')
+      })
   })
   it('When /subscriptions api is called with type param then it returns all subscriptions for given type', () => {
-    // Todo
+    cy.request('http://localhost:3000/subscriptions?type=Plan 4')
+      .then(res => {
+        expect(res.status).to.equal(200)
+
+        // Any random element should meet these requirements
+        const randomIndex = Math.floor(Math.random() * res.body.length)
+        const subscription = res.body[randomIndex]
+
+        expect(subscription.id).to.not.be.null
+        expect(subscription.type).to.equal('Plan 4')
+        expect(subscription.price).to.exist
+      })
   })
 
 

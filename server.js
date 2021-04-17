@@ -3,6 +3,8 @@ const app = express()
 const port = 3000
 
 let users = require('./data/users.json')
+let subscriptions = require('./data/subscriptions.json')
+let deliveries = require('./data/deliveries.json')
 
 app.get('/users', (req, res) => {
   const user_id = req.query.id
@@ -10,6 +12,7 @@ app.get('/users', (req, res) => {
   const user_subscription_id = req.query.subscription_id
   let user;
 
+  // No query parameters
   if (Object.keys(req.query).length === 0) {
     users.sort((a,b) => (a.email > b.email) ? 1 : -1)
     res.status(200).send(users)
@@ -33,8 +36,31 @@ app.get('/users', (req, res) => {
     }
   }
 })
+
 app.get('/subscriptions', (req, res) => {
-  res.send('Subscriptions!')
+  const subscription_id = req.query.id;
+  const subscription_type = req.query.type;
+
+  // Query parameter is a subscription id
+  if (subscription_id) {
+    let response = {};
+
+    response.subscription = subscriptions.find(s => s.id === parseInt(subscription_id))
+    response.user = users.find(u => u.subscription_id === parseInt(subscription_id))
+    response.deliveries = deliveries.filter(d => d.subscription_id === parseInt(subscription_id))
+
+    if (response.subscription) {
+      res.status(200).send(response)
+    }
+    else {
+      res.status(404).send("Not Found")
+    }
+  }
+  // Query parameter is a subscription type
+  else if (subscription_type) {
+    let response = subscriptions.filter(s => s.type === subscription_type)
+    res.status(200).send(response)
+  }
 })
 app.get('/deliveries', (req, res) => {
   res.send('Deliveries!')
