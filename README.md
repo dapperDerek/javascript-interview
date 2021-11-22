@@ -2,7 +2,7 @@
 
 ## Welcome!
 
-There are 3 parts to this take-home assessment:
+There are 3 parts to this assessment:
 
 ---
 ### Part 1
