@@ -2,23 +2,36 @@
 
 ## Welcome!
 
-There are 3 parts to this assessment:
+There are 4 parts to this assessment. All materials can be found found within the `cypress/integration/interview` directory.
 
 ---
 ### Part 1
-> Create a Restful API in `server.js` with the functionality to sucessfully pass the scenarios found at `cypress/integration/interview/interview-part-1.spec.js`.
+Implement the following functionality in the `server.js` file:
 
-** _Hint: You may want to flesh out those tests to help ensure your API is working as intended!_ **
+#### Users API
+  - When `/users` api is called with no params, then it returns all users ordered by email ascending
+  - When `/users` api is called with `email` query param, then it returns user for `email`
 
+#### Subscriptions API
+  - When `/subscriptions` api is called with `id` query param, then it returns subscription, user, and deliveries for `subscription_id`
+  - When `/subscriptions` api is called with `type` query param then it returns all subscriptions for `type`
+
+
+ #### Deliveries API
+  - When `/deliveries` api is called with `id` query param, then it returns delivery, subscription, and user for `id`
+  - When `/deliveries` api is called with `subscription_id` param then it returns all deliveries for `subscription_id`
 
 
 ### Part 2
-> Complete the exercise found in `interview-part-2`
-
+Implement integration tests for your APIs in the `interview-part-2.spec.js` file. Don't forget to test for negative scenarios!
 
 
 ### Part 3
-> Finally, complete the exercise found in `interview-part-3`
+Complete the exercise found in `interview-part-3.spec.js`
+
+
+### Part 4
+Finally, complete the exercise found in `interview-part-4`
 
 
 ---
