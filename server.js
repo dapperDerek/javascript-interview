@@ -2,17 +2,21 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+
 app.get('/users', (req, res) => {
-  res.send('Users!')
+  res.status(200).json({ text: 'Users!' })
 })
+
 app.get('/subscriptions', (req, res) => {
-  res.send('Subscriptions!')
+  res.status(200).json({ text: 'Subscriptions!' })
 })
+
 app.get('/deliveries', (req, res) => {
-  res.send('Deliveries!')
+  res.status(200).json({ text: 'Deliveries!' })
 })
+
 app.get('/', (req, res) => {
-  res.send('Nothing here bud.')
+  res.status(200).json({ text: 'Nothing here bud.' })
 })
 
 app.listen(port, () => {
